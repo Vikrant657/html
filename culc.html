@@ -1,0 +1,156 @@
+<html>
+<head>
+<title> task </title>
+<style>
+body{
+background-image:rl("https://wallpapertag.com/wallpaper/full/9/c/7/134856-math-backgrounds-1920x1080-phone.jpg");
+}
+
+h1{
+color:steelblue;}
+
+input{
+font-size:30px;
+border:2px solid black;
+border-radius: 9px;
+background-color:white;}
+
+#bt4,#bt5,#bt6,#bt7,#bt8{
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px #999;
+}
+
+.css:hover {background-color:white;}
+
+.css:active {
+  background-color: black;
+  color:white;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  
+}
+#p{
+color:white;}
+
+</style>
+
+
+
+<script>
+function addNum(){
+var no1= parseInt(document.getElementById("bt1").value);
+var no2= parseInt(document.getElementById("bt2").value);
+var no3= no1+no2;
+document.getElementById("bt3").value= no3;
+}
+function subNum(){
+var no1= parseInt(document.getElementById("bt1").value);
+var no2= parseInt(document.getElementById("bt2").value);
+var no3= no1-no2;
+document.getElementById("bt3").value= no3;
+}
+function multiplyNum(){
+var no1= parseInt(document.getElementById("bt1").value);
+var no2= parseInt(document.getElementById("bt2").value);
+var no3= no1*no2;
+document.getElementById("bt3").value= no3;
+}
+function devideNum(){
+var no1= parseInt(document.getElementById("bt1").value);
+var no2= parseInt(document.getElementById("bt2").value);
+var no3= no1/no2;
+document.getElementById("bt3").value= no3;
+}
+function ageCheck(){
+let age= parseInt(document.getElementById("b1").value);
+if(age>18){
+        return document.getElementById("p1").innerHTML="You are eligible to vote";
+}
+else{
+     return document.getElementById("p1").innerHTML="you are not elegible to vote";
+}
+
+}
+function dayCheck(){
+let day= parseInt(document.getElementById("b2").value);
+if(day==1){
+        return document.getElementById("p2").innerHTML="Monday";}
+else if(day==2){
+        return document.getElementById("p2").innerHTML="Tuesday";}
+else if(day==3){
+        return document.getElementById("p2").innerHTML="Wednesday";}
+else if(day==4){
+        return document.getElementById("p2").innerHTML="THrusday";}
+else if(day==5){
+        return document.getElementById("p2").innerHTML="Friday";}
+else if(day==6){
+        return document.getElementById("p2").innerHTML="saturday";}
+else if(day==7){
+        return document.getElementById("p2").innerHTML="Sunday";}
+else{
+     return document.getElementById("p2").innerHTML="Enter a valid day";
+}
+}
+function promt(){
+var n1= parseInt(prompt("enter the number").value);
+var n2= parseInt(prompt("enter teh secconfd number:").value);
+alert("Sum ="+(n1+n2));
+
+}
+
+</script>
+</head>
+<body>
+<center>
+<h1><ul>CALCULATOR</ul></h1>
+<hr><hr>
+<form id ="myForm">
+
+
+
+<input type ="text"  id="bt1" name="bt1" placeholder="Enter the first number"/><br><br>
+<input type ="text"  id="bt2" name="bt2" placeholder="Enter the second number"/><br><br>
+<input type ="text"  id="bt3" name="bt3" placeholder="Result"/>
+<br>
+
+<input type ="button" class="css" id="bt4"  value="Add" onclick="addNum()"/>&nbsp || &nbsp
+
+<input type ="button" class="css" id="bt5"  value="Subtract" onclick="subNum()"/>&nbsp || &nbsp
+
+<input type ="button" class="css" id="bt6" value="Multiply" onclick="multiplyNum()"/>&nbsp || &nbsp
+
+<input type ="button" class="css" id="bt7"  value="Divide" onclick="devideNum()"/>
+<br><br>
+
+
+<input class="css" id ="bt8" type="reset" value="Reset"/>
+<hr>
+<hr>
+
+<input type ="text"  id="b1" name="b1" placeholder="Enter your age"/>
+<br>
+<input type ="button" class="css" id="b" value="check" onclick="ageCheck()"/>
+<p id ="p1"></p>
+<hr><hr>
+<input type ="text"  id="b2" name="b2" placeholder="Enter day"/>
+<br>
+<input type ="button" class="css" id="b3" value="check" onclick="dayCheck()"/>
+<p id ="p2"></p>
+<hr>
+
+<input type ="button" class="css" id="b3" value="Submit" onclick="promt()"/>
+
+</form>
+</center>
+</body>
+</html>
